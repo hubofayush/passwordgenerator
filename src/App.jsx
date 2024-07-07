@@ -37,8 +37,7 @@ function App() {
     <>
       <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500">
         <h1 className="text-white text-center my-3">Password Generator</h1>
-
-        <div className="flex shadow rounded-lg overflow-hidden mb-4">
+        <div className="flex flex-col sm:flex-row shadow rounded-lg overflow-hidden mb-4">
           <input
             type="text"
             readOnly
@@ -50,14 +49,14 @@ function App() {
             ref={passRef}
           />
           <button
-            className="bg-blue-700 text-white p-1 rounded-e-lg"
+            className="bg-blue-700 text-white p-1 rounded-e-lg mt-2 sm:mt-0 sm:ml-2"
             onClick={copyClipboard}
           >
             Copy
           </button>
         </div>
-        <div className="flex text-sm gap-x-2">
-          <div className="flex item-center gap-x-2">
+        <div className="flex flex-col sm:flex-row text-sm gap-x-2">
+          <div className="flex items-center gap-x-2 mb-2 sm:mb-0">
             <input
               type="range"
               min={8}
@@ -69,7 +68,7 @@ function App() {
             />
             <label>length {length}</label>
           </div>
-          <div className="flex text-sm gap-x-2">
+          <div className="flex items-center gap-x-2 mb-2 sm:mb-0">
             <input
               type="checkbox"
               id="number"
@@ -77,7 +76,7 @@ function App() {
             />
             <label htmlFor="number">numbers</label>
           </div>
-          <div className="flex text-sm gap-x-2">
+          <div className="flex items-center gap-x-2">
             <input
               type="checkbox"
               id="char"
